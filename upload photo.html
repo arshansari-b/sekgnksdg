@@ -1,0 +1,171 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Photo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+        }
+
+        .container {
+            border: 2px solid #2f2d2d;
+            width: 500px;
+            background-color: #2f2d2d;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #picTitle {
+            width: 100%;
+            background-color: white;
+            color: black;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #picFile {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        #googleAuthBtn, #uploadPic {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1c8de3;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="googleAuthBtn">Login with Google</button>
+        <input type="text" id="picTitle" placeholder="Picture Title" disabled>
+        <label for="picFile">Upload Photos</label>
+        <input type="file" id="picFile" accept="image/*" disabled>
+        <button id="uploadPic" disabled>Publish Picture</button>
+    </div>
+    <script type="module" src="upload photo.js"></script>
+</body>
+</html>
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Upload Photo</title>
+     <link rel="stylesheet" href="styles.css">
+     <style>
+         body {
+             font-family: Arial, sans-serif;
+             background-color: black;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             height: 100vh;
+             margin: 0;
+             color: white;
+         }
+
+         .container {
+             border: 2px solid #2f2d2d;
+             width: 90%;
+             max-width: 500px;
+             background-color: #2f2d2d;
+             padding: 20px;
+             border-radius: 10px;
+             box-sizing: border-box;
+         }
+
+         #picTitle {
+             width: 100%;
+             background-color: white;
+             color: black;
+             padding: 10px;
+             margin-bottom: 20px;
+             border-radius: 5px;
+             border: none;
+             box-sizing: border-box;
+         }
+
+         label {
+             display: block;
+             margin-bottom: 10px;
+         }
+
+         #picFile {
+             width: 100%;
+             padding: 10px;
+             margin-bottom: 20px;
+             border-radius: 5px;
+             border: none;
+             box-sizing: border-box;
+         }
+
+         #googleAuthBtn, #uploadPic {
+             width: 100%;
+             padding: 10px;
+             margin-bottom: 20px;
+             border: none;
+             border-radius: 5px;
+             background-color: #1c8de3;
+             color: white;
+             cursor: pointer;
+         }
+
+         @media (max-width: 600px) {
+             body {
+                 padding: 10px;
+             }
+
+             .container {
+                 width: 100%;
+                 padding: 15px;
+             }
+
+             #googleAuthBtn, #uploadPic {
+                 padding: 8px;
+             }
+
+             #picTitle, #picFile {
+                 padding: 8px;
+             }
+         }
+     </style>
+ </head>
+ <body>
+     <div class="container">
+         <button id="googleAuthBtn">Login with Google</button>
+         <input type="text" id="picTitle" placeholder="Picture Title" disabled>
+         <label for="picFile">Upload Photos</label>
+         <input type="file" id="picFile" accept="image/*" disabled>
+         <button id="uploadPic" disabled>Publish Picture</button>
+     </div>
+     <script type="module" src="upload photo.js"></script>
+ </body>
+ </html>

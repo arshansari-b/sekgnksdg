@@ -1,0 +1,184 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Video Upload</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            border: 2px solid #2f2d2d;;
+            width: 500px;
+            color: white;
+            background-color: #2f2d2d;
+            height: 500px;
+            margin-left: 400px;
+        }
+        #titleInput{
+            margin-top: 9px;
+            width: 400px;
+            margin-left: 40px;
+            
+            height: 25px;
+        }
+        #videoUpload{
+            margin-top: 60px;
+            margin-left: 80px;
+            size: 60px;
+        }
+        label{
+            margin-left: 40px;
+        }
+        #thumbnailUpload{
+            margin-top: 60px;
+            margin-left: 30px;
+        }
+
+        #googleAuthBtn{
+            margin-top: 70px;
+            padding: 10px;
+            border: 2px solid #1c8de3;
+            margin-left: 180px;
+             background-color: #1c8de3;
+            color: white;
+            
+        }
+        #publishBtn{
+            margin-top: 60px;
+            margin-left: 220px;
+            padding: 10px;
+            border: 2px solid #1c8de3;
+            background-color: #1c8de3;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <input type="text" id="titleInput" placeholder="Enter Video Title">
+
+        <label> Upload Video</label>
+
+         <input type="file" id="videoUpload" placeholder="Video" accept="video/*">
+
+        <label> Upload Thumbnail</label>
+         <input type="file" id="thumbnailUpload" accept="image/*">
+
+        <button id="googleAuthBtn">Login with Google</button>
+
+    <button id="publishBtn">Publish</button>
+        
+
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Video Upload</title>
+     <link rel="stylesheet" href="styles.css">
+     <style>
+         body {
+             font-family: Arial, sans-serif;
+             background-color: black;
+             color: white;
+             margin: 0;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             min-height: 100vh;
+             padding: 20px;
+         }
+
+         .container {
+             border: 2px solid #2f2d2d;
+             background-color: #2f2d2d;
+             padding: 20px;
+             border-radius: 10px;
+             width: 100%;
+             max-width: 500px;
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+         }
+
+         input[type="text"],
+         input[type="file"] {
+             width: calc(100% - 40px);
+             margin: 10px 20px;
+             padding: 10px;
+             border-radius: 5px;
+             border: 1px solid #444;
+             background-color: #1f1d1d;
+             color: white;
+         }
+
+         label {
+             display: block;
+             margin: 20px 20px 10px;
+             font-size: 18px;
+         }
+
+         button {
+             display: block;
+             width: calc(100% - 40px);
+             margin: 20px;
+             padding: 10px;
+             border: none;
+             border-radius: 5px;
+             background-color: #1c8de3;
+             color: white;
+             cursor: pointer;
+             font-size: 16px;
+         }
+
+         button:hover {
+             background-color: #147ac1;
+         }
+
+         @media (max-width: 600px) {
+             .container {
+                 width: 100%;
+                 margin: 10px;
+                 padding: 15px;
+             }
+
+             input[type="text"],
+             input[type="file"],
+             button {
+                 width: calc(100% - 30px);
+                 margin: 10px 15px;
+             }
+         }
+     </style>
+ </head>
+ <body>
+     <div class="container">
+         <input type="text" id="titleInput" placeholder="Enter Video Title">
+
+         <label for="videoUpload">Upload Video</label>
+         <input type="file" id="videoUpload" accept="video/*">
+
+         <label for="thumbnailUpload">Upload Thumbnail</label>
+         <input type="file" id="thumbnailUpload" accept="image/*">
+
+           <button id="googleAuthBtn">Login with Google</button>
+         <button id="publishBtn">Publish</button>
+     </div>
+     <script type="module" src="video.js"</script>
+ </body>
+ </html>
+ 

@@ -1,0 +1,227 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Video Player</title>
+     <style>
+         body {
+             font-family: Arial, sans-serif;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             height: 100vh;
+             margin: 0;
+             background-color: #181818;
+             color: #ffffff;
+         }
+         .comment-section {
+             margin-top: 20px;
+         }
+
+         .comment-input {
+             display: flex;
+             margin-bottom: 10px;
+         }
+
+         .comment-input input {
+             flex: 1;
+             padding: 10px;
+             border-radius: 5px;
+             border: none;
+             margin-right: 10px;
+             font-size: 1em;
+         }
+
+         .comment-input button {
+             padding: 10px 20px;
+             font-size: 1em;
+             border: none;
+             border-radius: 5px;
+             cursor: pointer;
+             background-color: #ffcc00;
+             color: #000000;
+         }
+
+         .comments-list {
+             margin-top: 20px;
+         }
+
+         .comment-item {
+             display: flex;
+             margin-bottom: 10px;
+         }
+
+         .comment-item img {
+             width: 40px;
+             height: 40px;
+             border-radius: 50%;
+             margin-right: 10px;
+         }
+
+         .comment-item .comment-content {
+             display: flex;
+             flex-direction: column;
+         }
+
+         .comment-item .comment-username {
+             font-weight: bold;
+         }
+
+         .comment-item .comment-text {
+             margin-top: 5px;
+         }
+
+         .video-container {
+             width: 90%;
+             max-width: 800px;
+             margin: 20px auto;
+             padding: 20px;
+             background-color: #282828;
+             border-radius: 10px;
+             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+             color: #ffffff;
+         }
+
+         #videoPlayer video {
+             width: 100%;
+             height: auto;
+             max-height: 400px;
+             border-radius: 10px;
+         }
+
+         #videoTitle {
+             margin-top: 15px;
+             font-size: 1.5em;
+         }
+
+         #videoTime {
+             margin-top: 5px;
+             font-size: 0.9em;
+             color: #b3b3b3;
+         }
+
+         .profile {
+             display: flex;
+             align-items: center;
+             margin-top: 15px;
+         }
+
+         #userProfilePic {
+             width: 50px;
+             height: 50px;
+             border-radius: 50%;
+             margin-right: 10px;
+         }
+
+         #userName {
+             font-size: 1.2em;
+         }
+
+         .follow-button {
+             margin-top: 15px;
+             padding: 10px 20px;
+             font-size: 1em;
+             border: none;
+             border-radius: 5px;
+             cursor: pointer;
+             transition: background-color 0.3s;
+         }
+
+         .follow-button.following {
+             background-color: #555;
+             color: #ffffff;
+         }
+
+         .follow-button.not-following {
+             background-color: #ffcc00;
+             color: #000000;
+         }
+
+         .follower-count {
+             margin-top: 10px;
+             font-size: 1em;
+         }
+
+         .like-dislike-container {
+             display: flex;
+             justify-content: space-between;
+             margin-top: 15px;
+         }
+
+         .like-button, .dislike-button {
+             padding: 10px 20px;
+             font-size: 1em;
+             border: none;
+             border-radius: 5px;
+             cursor: pointer;
+             transition: background-color 0.3s;
+         }
+
+         .like-button.liked, .dislike-button.disliked {
+             background-color: #2196f3;
+             color: #ffffff;
+         }
+
+         .like-button.not-liked, .dislike-button.not-disliked {
+             background-color: #555;
+             color: #ffffff;
+         }
+
+         .like-count, .dislike-count, .view-count {
+             margin-top: 10px;
+             font-size: 1em;
+         }
+
+         @media (max-width: 600px) {
+             .video-container {
+                 padding: 15px;
+             }
+
+             #videoTitle {
+                 font-size: 1.2em;
+             }
+
+             #userProfilePic {
+                 width: 40px;
+                 height: 40px;
+                 margin-right: 5px;
+             }
+
+             #userName {
+                 font-size: 1em;
+             }
+         }
+     </style>
+ </head>
+ <body>
+     <div class="video-container">
+         <div id="videoPlayer"></div>
+         <h3 id="videoTitle"></h3>
+          <div id="viewCount" class="view-count">Views: 0</div>
+         <div id="videoTime"></div>
+         <div class="profile">
+             <img id="userProfilePic" src="" alt="User Profile Picture">
+             <span id="userName"></span>
+         </div>
+         <button id="followBtn" class="follow-button not-following">Follow</button>
+         <div id="followerCount" class="follower-count">Followers: 0</div>
+         <div class="like-dislike-container">
+             <button id="likeBtn" class="like-button not-liked">Like</button>
+             <button id="dislikeBtn" class="dislike-button not-disliked">Dislike</button>
+         </div>
+         <div id="likeCount" class="like-count">Likes: 0</div>
+         <div id="dislikeCount" class="dislike-count">Dislikes: 0</div>
+         <div class="comment-section">
+             <div class="comment-input">
+                 <input type="text" id="commentInput" placeholder="Add a public comment...">
+                 <button id="commentSubmitBtn">Submit</button>
+             </div>
+             <div id="commentsList" class="comments-list"></div>
+         </div>
+     </div>
+
+     <script type="module" src="video view.js"></script>
+ </body>
+ </html>

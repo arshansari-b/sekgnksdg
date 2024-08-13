@@ -1,0 +1,188 @@
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #2f2d2d;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  width: 20vw;
+  background-color: #201d1d;
+  overflow-y: scroll;
+  color: white;
+}
+
+.left h1 {
+  color: #0091ff;
+  font-size: 50px;
+  margin-left: 40px;
+}
+
+.left nav ul {
+  list-style: none;
+  padding: 0;
+  font-size: 33px;
+}
+
+.left nav ul li {
+  margin: 12px;
+}
+
+.left nav ul li a.link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.left nav ul li a.link:hover {
+  background-color: #979191;
+}
+
+.right {
+  flex: 1;
+  background-color: #201d1d;;
+  
+  color: white;
+  overflow-y: auto;
+}
+
+.right header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  padding: 10px;
+  background-color: #201d1d;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.upload {
+  margin-left: auto;
+  padding: 10px 20px;
+  background-color: #1c8de3;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.Searchbtn{
+  margin-left: auto;
+  padding: 3px 7px;
+  background-color: #1c8de3;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  text-decoration: none;
+}
+
+.Search {
+  margin-left: 20px;
+  width: 500px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  flex: 1;
+}
+
+#videoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.video-item {
+  background-color: #201d1d;
+  border-radius: 8px;
+  padding: 10px;
+  color: white;
+  width: calc(33.333% - 20px);
+}
+
+.video-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.video-item h3 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .left {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    height: 100%;
+    transition: left 0.3s;
+    z-index: 1000;
+  }
+
+  .left.open {
+    left: 0;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .menu-button {
+    display: inline-block;
+  }
+
+  .Search {
+    flex: 1;
+    width: 100px;
+  }
+
+  .upload {
+    margin-left: 10px;
+  }
+
+  .video-item {
+    width: calc(100% - 20px);
+  }
+}
